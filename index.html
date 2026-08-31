@@ -79,6 +79,16 @@
   .dday-unit { text-align: center; min-width: 56px; }
   .dday-unit .num { font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; }
   .dday-unit .lab { font-size: 11px; opacity: 0.8; margin-top: 2px; }
+  .cta-btn {
+    display: inline-block; margin-top: 20px; background: #ffd166; color: var(--navy);
+    font-weight: 800; padding: 13px 30px; border-radius: 999px; font-size: 15.5px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  }
+  .cta-btn:hover { filter: brightness(1.05); }
+  .cta-btn-sm {
+    display: inline-block; margin-top: 10px; margin-left: 8px; background: var(--navy); color: #fff;
+    font-weight: 700; padding: 5px 14px; border-radius: 999px; font-size: 12px;
+  }
 
   section { padding: 72px 20px; max-width: 1080px; margin: 0 auto; }
   section.alt { background: var(--cream); max-width: none; }
@@ -125,6 +135,9 @@
     padding: 2px 8px; border-radius: 5px; margin-left: 6px; vertical-align: middle;
   }
   .note-box { margin-top: 22px; font-size: 13.5px; color: var(--muted); background: #fff; padding: 14px 18px; border-radius: 8px; border: 1px dashed var(--line); }
+  .layout-map { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 18px 0 26px; }
+  .layout-map svg { width: 100%; height: auto; display: block; }
+  .layout-map .cap { text-align: center; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
 
   .exp-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 30px; }
   @media (max-width: 720px) { .exp-cards { grid-template-columns: 1fr; } }
@@ -185,6 +198,7 @@
       <div>📅 2026. 9. 7.(월) ~ 9. 12.(토) · 메인행사 9.12.(토)</div>
       <div>📍 강변이음센터 및 강변이음교 일원</div>
     </div>
+    <a class="cta-btn" href="https://docs.google.com/forms/d/1coPSb1NbFjxiTRmu1LRx7YWqIQphOWT-SJYH3kTdMAs/viewform" target="_blank" rel="noopener">📝 사전신청 하기</a>
     <div class="dday-box" id="ddayBox">
       <div class="dday-unit"><div class="num" id="dd-d">--</div><div class="lab">DAYS</div></div>
       <div class="dday-unit"><div class="num" id="dd-h">--</div><div class="lab">HOURS</div></div>
@@ -203,7 +217,6 @@
       <div class="info-item"><div class="label">행사명</div><div class="value">2026년 불암동 주민 화합 프로그램 「정겹DAY」</div></div>
       <div class="info-item"><div class="label">일시</div><div class="value">2026. 9. 7.(월) ~ 9. 12.(토)<br><span style="font-weight:400;font-size:13.5px;color:var(--muted)">메인행사(무대·부스 프로그램) 9.12.(토) 집중 운영</span></div></div>
       <div class="info-item"><div class="label">장소</div><div class="value">강변이음센터(1~3층), 건물 앞 특설무대, 강변이음교 일원</div></div>
-      <div class="info-item"><div class="label">참여 규모</div><div class="value">순간 최대 200명 (수용 한계 초과 시 입장 제한)</div></div>
       <div class="info-item full"><div class="label">주최 · 주관</div><div class="value">주최 김해시 &nbsp;|&nbsp; 주관 김해시도시개발공사 · 불암강변이음마을관리사회적협동조합</div></div>
       <div class="theme-quote">
         "과거 도로 건설로 오랜 기간 단절되었던 낙동강과 불암 마을을 강변이음센터와 강변이음교를 통해 새롭게 이어내며, 아랫마을과 윗마을이 융합되는 <b>'단절에서 이음으로'</b>의 화합의 장을 조성합니다."
@@ -217,33 +230,51 @@
     <div class="kicker">SCHEDULE</div>
     <h2 class="section-title">행사 전체 일정</h2>
     <p style="margin-top:-20px;color:var(--muted);font-size:14px;">장소 : <span class="place-tag" style="background:var(--orange)">A</span> 건물 앞 특설무대(메인무대) &nbsp; <span class="place-tag">B</span> 강변이음센터 1~3층 · 앞마당(체험·부스) &nbsp; <span class="place-tag" style="background:#7a6fd1">C</span> 강변이음교(포토존)</p>
+    <div class="layout-map">
+      <svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="640" height="340" fill="#eef2fb" rx="16"/>
+        <path d="M640,40 C500,110 480,190 640,250 L640,340 L500,340 C400,260 400,140 500,40 Z" fill="#bcdcf0" opacity="0.55"/>
+        <text x="560" y="315" font-size="13" fill="#4a7ea8" font-weight="700">낙동강</text>
+        <rect x="420" y="130" width="190" height="26" rx="13" fill="#7a6fd1"/>
+        <text x="515" y="148" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">C 강변이음교</text>
+        <rect x="60" y="50" width="230" height="140" rx="14" fill="#2e7d6b"/>
+        <text x="175" y="112" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">B</text>
+        <text x="175" y="134" font-size="12.5" fill="#fff" text-anchor="middle">강변이음센터</text>
+        <text x="175" y="152" font-size="11" fill="#e7f5f0" text-anchor="middle">1~3층 · 앞마당</text>
+        <rect x="80" y="215" width="190" height="70" rx="12" fill="#e8752c"/>
+        <text x="175" y="247" font-size="14" fill="#fff" text-anchor="middle" font-weight="800">A 건물 앞 특설무대</text>
+        <text x="175" y="267" font-size="11" fill="#fff2e8" text-anchor="middle">메인무대 · 주민한마당</text>
+        <line x1="290" y1="130" x2="420" y2="145" stroke="#999" stroke-dasharray="4 4"/>
+        <text x="20" y="28" font-size="14" fill="#2b2470" font-weight="800">행사장 배치도</text>
+      </svg>
+      <div class="cap">※ 실제 축척과 다를 수 있는 개략도입니다. 정확한 위치는 오시는길 지도를 참고해 주세요.</div>
+    </div>
     <table class="schedule">
       <tr><th style="width:16%">시간</th><th style="width:14%">장소</th><th>프로그램</th></tr>
       <tr>
         <td><span class="time-badge">9.7(월)~9.11(금)</span></td>
         <td><span class="place-tag">B</span></td>
-        <td><b>스마트팜 체험(사전예약)</b> — 회차별 2회 운영 · 스마트팜 작물 수확 및 먹거리 제작 체험</td>
+        <td><b>스마트팜 체험(사전예약)</b></td>
       </tr>
       <tr>
         <td><span class="time-badge">9.12(토) 상시</span></td>
         <td><span class="place-tag">B</span> <span class="place-tag" style="background:#7a6fd1">C</span></td>
-        <td><b>선암장터 ZONE · 시간이음 ZONE · 강변피크닉 ZONE 상시 운영</b> — 체험부스, 불암 스탬프투어, 불암 포토콘테스트, 스마트팜 체험(3회) 등</td>
+        <td><b>선암장터 ZONE · 시간이음 ZONE · 강변피크닉 ZONE 상시 운영</b></td>
       </tr>
       <tr>
         <td><span class="time-badge">16:00~17:00</span></td>
         <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>길놀이 오프닝 '단절에서 이음으로'</b> — 순회 길놀이 및 풍물 공연, 내빈소개, 인사말, 도시재생사업 소개</td>
+        <td><b>길놀이 오프닝 '단절에서 이음으로'</b></td>
       </tr>
       <tr>
         <td><span class="time-badge">17:00~18:00</span></td>
         <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>주민참여 불암 자랑대회</b> — 주민 장기자랑 및 노래자랑, 퀴즈쇼</td>
+        <td><b>주민참여 불암 자랑대회</b></td>
       </tr>
       <tr>
         <td><span class="time-badge">18:00~19:00</span></td>
         <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>강변이음 주민한마당</b>(티켓 소지자 200명) — 바베큐 및 스마트팜 작물 활용 샌드위치·샐러드 제공<br>
-        <span style="color:var(--muted);font-size:13px">※ 18:00~18:30 강변이음센터 2·3층 난간 <b>불암나루 소원등 점등식</b> 동시 진행</span></td>
+        <td><b>강변이음 주민한마당</b></td>
       </tr>
       <tr>
         <td><span class="time-badge">19:00~21:00</span></td>
@@ -317,6 +348,7 @@
       <p>스마트팜 작물 수확(바질, 루꼴라 등) 및 피자·샐러드·카나페 제작 체험</p>
       <p>13회 · 회당 20명(총 260명)</p>
       <span class="price">사전예약제</span>
+      <a class="cta-btn-sm" href="https://docs.google.com/forms/d/1coPSb1NbFjxiTRmu1LRx7YWqIQphOWT-SJYH3kTdMAs/viewform" target="_blank" rel="noopener">사전신청 →</a>
     </div>
   </div>
 </section>
@@ -325,16 +357,16 @@
   <div class="inner">
     <div class="kicker">LOCATION</div>
     <h2 class="section-title">행사장 오시는 길</h2>
-    <p style="margin-top:-20px;color:var(--muted);font-size:14.5px;">강변이음센터 · 경남 김해시 불암동 일원 (강변이음교 인근)</p>
+    <p style="margin-top:-20px;color:var(--muted);font-size:14.5px;">강변이음센터 · 경남 김해시 김해대로 2783</p>
     <div class="location-grid">
       <div>
         <div class="map-embed">
-          <iframe src="https://maps.google.com/maps?q=%EA%B0%95%EB%B3%80%EC%9D%B4%EC%9D%8C%EC%84%BC%ED%84%B0%20%EA%B9%80%ED%95%B4%EC%8B%9C%20%EB%B6%88%EC%95%94%EB%8F%99&z=16&output=embed" loading="lazy"></iframe>
+          <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EB%82%A8%20%EA%B9%80%ED%95%B4%EC%8B%9C%20%EA%B9%80%ED%95%B4%EB%8C%80%EB%A1%9C%202783&z=17&output=embed" loading="lazy"></iframe>
         </div>
         <div class="map-links">
-          <a href="https://map.kakao.com/?q=강변이음센터 김해 불암동" target="_blank" rel="noopener">카카오맵에서 길찾기</a>
-          <a href="https://map.naver.com/p/search/강변이음센터 김해 불암동" target="_blank" rel="noopener">네이버지도에서 길찾기</a>
-          <a href="https://www.google.com/maps/search/?api=1&query=강변이음센터 김해 불암동" target="_blank" rel="noopener">구글맵에서 길찾기</a>
+          <a href="https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%EA%B9%80%ED%95%B4%EC%8B%9C%20%EA%B9%80%ED%95%B4%EB%8C%80%EB%A1%9C%202783" target="_blank" rel="noopener">카카오맵에서 길찾기</a>
+          <a href="https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%EA%B9%80%ED%95%B4%EC%8B%9C%20%EA%B9%80%ED%95%B4%EB%8C%80%EB%A1%9C%202783" target="_blank" rel="noopener">네이버지도에서 길찾기</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EB%82%A8%20%EA%B9%80%ED%95%B4%EC%8B%9C%20%EA%B9%80%ED%95%B4%EB%8C%80%EB%A1%9C%202783" target="_blank" rel="noopener">구글맵에서 길찾기</a>
         </div>
       </div>
       <div>
