@@ -194,6 +194,18 @@
   footer .copyright { font-size: 12px; opacity: 0.6; margin-top: 14px; }
 
   .badge-warn { display:inline-block; background:#fff3e0; color:#b5541a; font-size:12px; font-weight:700; padding:5px 12px; border-radius:8px; margin-bottom: 14px; }
+
+  .timetable-wrap { overflow-x: auto; margin-top: 18px; }
+  table.timetable { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 14px; }
+  table.timetable th { background: var(--navy); color: #fff; padding: 12px 10px; font-weight: 700; text-align: center; }
+  table.timetable td { border: 1px solid var(--line); padding: 10px 12px; vertical-align: middle; text-align: center; }
+  table.timetable td.time-cell { background: #fbfaf7; font-weight: 800; color: var(--orange); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  table.timetable td.zone-a { background: #fff7f2; }
+  table.timetable td.zone-b { background: #f2f8f4; }
+  table.timetable td.zone-c { background: #f5f1fa; }
+  table.timetable td.empty { color: var(--muted); background: #fcfcfa; }
+  table.timetable td.remark { font-size: 12px; color: var(--muted); text-align: left; }
+  table.timetable tr.section-row td { background: var(--navy); color: #fff; font-weight: 800; text-align: center; padding: 9px; font-size: 13px; letter-spacing: 0.5px; }
 </style>
 </head>
 <body>
@@ -271,39 +283,86 @@
       </svg>
       <div class="cap">※ 실제 축척과 다를 수 있는 개략도입니다. 정확한 위치는 오시는길 지도를 참고해 주세요.</div>
     </div>
-    <table class="schedule">
-      <tr><th style="width:16%">시간</th><th style="width:14%">장소</th><th>프로그램</th></tr>
-      <tr>
-        <td><span class="time-badge">9.7(월)~9.11(금)</span></td>
-        <td><span class="place-tag">B</span></td>
-        <td><b>스마트팜 체험(사전예약)</b></td>
-      </tr>
-      <tr>
-        <td><span class="time-badge">9.12(토) 상시</span></td>
-        <td><span class="place-tag">B</span> <span class="place-tag" style="background:var(--purple)">C</span></td>
-        <td><b>선암장터 ZONE · 시간이음 ZONE · 강변피크닉 ZONE 상시 운영</b></td>
-      </tr>
-      <tr>
-        <td><span class="time-badge">16:00~17:00</span></td>
-        <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>길놀이 오프닝 '단절에서 이음으로'</b></td>
-      </tr>
-      <tr>
-        <td><span class="time-badge">17:00~18:00</span></td>
-        <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>주민참여 불암 자랑대회(참여시 1만원 상당 리워드 제공)</b></td>
-      </tr>
-      <tr>
-        <td><span class="time-badge">18:00~19:00</span></td>
-        <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>강변이음 주민한마당</b></td>
-      </tr>
-      <tr>
-        <td><span class="time-badge">19:00~21:00</span></td>
-        <td><span class="place-tag" style="background:var(--orange)">A</span></td>
-        <td><b>메인 프로그램</b> — 주민 오케스트라·라인댄스·기타공연, 초대가수 공연, 디스코타임(전 주민 댄스타임)</td>
-      </tr>
+    <div class="timetable-wrap">
+    <table class="timetable">
+      <thead>
+        <tr>
+          <th>시간</th>
+          <th><span class="place-tag" style="background:var(--orange)">A</span> 건물 앞 특설무대(메인무대)</th>
+          <th><span class="place-tag">B</span> 강변이음센터 1~3층·앞마당(체험·부스)</th>
+          <th><span class="place-tag" style="background:var(--purple)">C</span> 강변이음교(포토존)</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-cell">13:00~16:00</td>
+          <td class="empty">무대 세팅</td>
+          <td class="zone-b" rowspan="4">상시 프로그램<br><span style="font-size:12.5px;color:#555;">불암 스탬프투어 · 체험부스<br>(강변이음센터 1~3층·앞마당)</span></td>
+          <td class="zone-c" rowspan="4">상시 프로그램<br><span style="font-size:12.5px;color:#555;">포토존 · 포토콘테스트<br>(강변이음교 일원)</span></td>
+          <td class="remark">사전신청 없이 자유 참여</td>
+        </tr>
+        <tr>
+          <td class="time-cell">16:00~17:00</td>
+          <td class="zone-a"><b>길놀이 오프닝</b><br><span style="font-size:12.5px;color:#555;">「단절에서 이음으로」</span></td>
+          <td class="remark">메인무대 오프닝</td>
+        </tr>
+        <tr>
+          <td class="time-cell">17:00~17:40</td>
+          <td class="zone-a"><b>주민참여 불암 자랑대회</b></td>
+          <td class="remark">참여 시 리워드 제공</td>
+        </tr>
+        <tr>
+          <td class="time-cell">17:40~18:00</td>
+          <td class="empty">무대 전환 · 정비</td>
+          <td class="remark">메인 프로그램 준비</td>
+        </tr>
+        <tr class="section-row"><td colspan="5">메인 프로그램 · 18:00 ~ 21:00 (강변이음 주민한마당)</td></tr>
+        <tr>
+          <td class="time-cell">18:00~18:30</td>
+          <td class="empty">-</td>
+          <td class="zone-b" rowspan="2"><b>소원등 점등식</b><span style="font-size:12.5px;color:#555;"><br>강변이음 주민한마당 · 식사 제공<br>(18:00~19:00)</span></td>
+          <td class="empty">-</td>
+          <td class="remark">소원등 참여 선착순 200명</td>
+        </tr>
+        <tr>
+          <td class="time-cell">18:30~19:00</td>
+          <td class="zone-a"><b>인사말</b></td>
+          <td class="empty">-</td>
+          <td class="remark"></td>
+        </tr>
+        <tr>
+          <td class="time-cell">19:00~19:30</td>
+          <td class="zone-a"><b>오케스트라 공연</b></td>
+          <td class="empty">-</td>
+          <td class="empty">-</td>
+          <td class="remark">주민 오케스트라</td>
+        </tr>
+        <tr>
+          <td class="time-cell">19:30~19:45</td>
+          <td class="zone-a"><b>라인댄스 공연</b></td>
+          <td class="empty">-</td>
+          <td class="empty">-</td>
+          <td class="remark"></td>
+        </tr>
+        <tr>
+          <td class="time-cell">19:45~20:00</td>
+          <td class="zone-a"><b>기타 공연</b></td>
+          <td class="empty">-</td>
+          <td class="empty">-</td>
+          <td class="remark"></td>
+        </tr>
+        <tr>
+          <td class="time-cell">20:00~</td>
+          <td class="zone-a"><b>초청가수 공연 · 행사 마무리</b></td>
+          <td class="empty">-</td>
+          <td class="empty">-</td>
+          <td class="remark">종료 시각은 현장 상황에 따라 유동적</td>
+        </tr>
+      </tbody>
     </table>
+  </div>
+  <p style="margin-top:10px;font-size:12.5px;color:var(--muted);">※ 18:00 이후 프로그램의 세부 배치(소원등 점등식·인사말 등)는 기존 공간구성 기준의 제안이며, 큐시트 확정 시 조정될 수 있습니다.</p>
     <div class="note-box">※ 상기 일정은 현장 여건 및 유관기관 협의에 따라 변경될 수 있습니다. 우천 시 예비장소(불암동 행정복지센터 2층 다목적실 등)로 전환 운영됩니다.</div>
   </div>
 </section>
