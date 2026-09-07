@@ -206,6 +206,21 @@
   table.timetable td.empty { color: var(--muted); background: #fcfcfa; }
   table.timetable td.remark { font-size: 12px; color: var(--muted); text-align: left; }
   table.timetable tr.section-row td { background: var(--navy); color: #fff; font-weight: 800; text-align: center; padding: 9px; font-size: 13px; letter-spacing: 0.5px; }
+
+  /* --- 배치도 / 타임테이블 (2026-09 갱신) --- */
+  .layout-map svg { border-radius: 10px; }
+  .map-legend { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px 18px;
+    margin-top:16px; font-size:13px; color:#444; }
+  .map-legend .no { display:inline-flex; align-items:center; justify-content:center;
+    width:20px; height:20px; border-radius:50%; background:#2E7F79; color:#fff;
+    font-size:11.5px; font-weight:800; margin-right:6px; vertical-align:middle; }
+  .map-legend .star { color:#f2b705; }
+  @media (max-width: 860px) { .map-legend { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .map-legend { grid-template-columns: 1fr; } }
+  table.timetable.tt3 { min-width: 0; }
+  table.timetable.tt3 td:nth-child(2) { text-align: left; }
+  .stamp-note { margin-top:16px; padding:12px 18px; background:#FDF3D6; border:1px solid #f2b705;
+    border-radius:10px; font-size:13.5px; font-weight:700; color:#6B5410; }
 </style>
 </head>
 <body>
@@ -263,106 +278,329 @@
   <div class="inner">
     <div class="kicker">SCHEDULE</div>
     <h2 class="section-title">행사 전체 일정</h2>
-    <p style="margin-top:-20px;color:var(--muted);font-size:14px;">장소 : <span class="place-tag" style="background:var(--orange)">A</span> 건물 앞 특설무대(메인무대) &nbsp; <span class="place-tag">B</span> 강변이음센터 1~3층 · 앞마당(체험·부스) &nbsp; <span class="place-tag" style="background:var(--purple)">C</span> 강변이음교(포토존)</p>
+    <p style="margin-top:-20px;color:var(--muted);font-size:14px;">아래 표의 장소 번호는 행사장 배치도의 구역 번호와 같습니다.</p>
     <div class="layout-map">
-      <svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="640" height="340" fill="#eef2fb" rx="16"/>
-        <path d="M640,40 C500,110 480,190 640,250 L640,340 L500,340 C400,260 400,140 500,40 Z" fill="#bcdcf0" opacity="0.55"/>
-        <text x="560" y="315" font-size="13" fill="#4a7ea8" font-weight="700">낙동강</text>
-        <rect x="420" y="130" width="190" height="26" rx="13" fill="#601986"/>
-        <text x="515" y="148" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">C 강변이음교</text>
-        <rect x="60" y="50" width="230" height="140" rx="14" fill="#07913a"/>
-        <text x="175" y="112" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">B</text>
-        <text x="175" y="134" font-size="12.5" fill="#fff" text-anchor="middle">강변이음센터</text>
-        <text x="175" y="152" font-size="11" fill="#e7f5f0" text-anchor="middle">1~3층 · 앞마당</text>
-        <rect x="80" y="215" width="190" height="70" rx="12" fill="#ea5414"/>
-        <text x="175" y="247" font-size="14" fill="#fff" text-anchor="middle" font-weight="800">A 건물 앞 특설무대</text>
-        <text x="175" y="267" font-size="11" fill="#fff2e8" text-anchor="middle">메인무대 · 주민한마당</text>
-        <line x1="290" y1="130" x2="420" y2="145" stroke="#999" stroke-dasharray="4 4"/>
-        <text x="20" y="28" font-size="14" fill="#132b88" font-weight="800">행사장 배치도</text>
-      </svg>
-      <div class="cap">※ 실제 축척과 다를 수 있는 개략도입니다. 정확한 위치는 오시는길 지도를 참고해 주세요.</div>
+      <svg viewBox="0 0 1750 1008" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="정겹DAY 행사장 배치도"><rect width="1750" height="1008" fill="#F2F7F5"/>
+<g transform="translate(0,0)">
+<clipPath id="mapclip"><rect x="0" y="0" width="1750" height="1008"/></clipPath>
+<g clip-path="url(#mapclip)">
+<rect width="1750" height="1008" fill="#3FA69E"/>
+<g transform="scale(1.20690) translate(-300,-195)">
+<rect x="40.0" y="-2.0" width="160.0" height="84.0" rx="8" fill="#369A92" transform="rotate(-8 120.0 40.0)"/>
+<rect x="257.5" y="17.0" width="145.0" height="82.0" rx="8" fill="#369A92" transform="rotate(-8 330.0 58.0)"/>
+<rect x="454.0" y="29.0" width="152.0" height="82.0" rx="8" fill="#369A92" transform="rotate(-8 530.0 70.0)"/>
+<rect x="655.0" y="52.0" width="140.0" height="80.0" rx="8" fill="#369A92" transform="rotate(-8 725.0 92.0)"/>
+<rect x="829.0" y="70.0" width="152.0" height="84.0" rx="8" fill="#369A92" transform="rotate(-8 905.0 112.0)"/>
+<rect x="1016.0" y="101.0" width="138.0" height="78.0" rx="8" fill="#369A92" transform="rotate(-8 1085.0 140.0)"/>
+<rect x="1195.0" y="80.0" width="126.0" height="72.0" rx="8" fill="#369A92" transform="rotate(-8 1258.0 116.0)"/>
+<rect x="8.5" y="254.0" width="155.0" height="92.0" rx="8" fill="#369A92" transform="rotate(-8 86.0 300.0)"/>
+<rect x="206.0" y="250.0" width="132.0" height="84.0" rx="8" fill="#369A92" transform="rotate(-8 272.0 292.0)"/>
+<rect x="376.0" y="232.0" width="152.0" height="84.0" rx="8" fill="#369A92" transform="rotate(-8 452.0 274.0)"/>
+<rect x="554.0" y="227.0" width="140.0" height="82.0" rx="8" fill="#369A92" transform="rotate(-8 624.0 268.0)"/>
+<rect x="49.0" y="376.0" width="182.0" height="112.0" rx="8" fill="#369A92" transform="rotate(-8 140.0 432.0)"/>
+<rect x="271.0" y="369.0" width="162.0" height="102.0" rx="8" fill="#369A92" transform="rotate(-8 352.0 420.0)"/>
+<rect x="469.0" y="346.0" width="182.0" height="112.0" rx="8" fill="#369A92" transform="rotate(-8 560.0 402.0)"/>
+<rect x="687.0" y="342.0" width="150.0" height="100.0" rx="8" fill="#369A92" transform="rotate(-8 762.0 392.0)"/>
+<rect x="869.0" y="322.0" width="138.0" height="88.0" rx="8" fill="#369A92" transform="rotate(-8 938.0 366.0)"/>
+<rect x="23.0" y="544.0" width="190.0" height="120.0" rx="8" fill="#369A92" transform="rotate(-8 118.0 604.0)"/>
+<rect x="244.0" y="528.0" width="172.0" height="112.0" rx="8" fill="#369A92" transform="rotate(-8 330.0 584.0)"/>
+<rect x="451.0" y="516.0" width="182.0" height="112.0" rx="8" fill="#369A92" transform="rotate(-8 542.0 572.0)"/>
+<rect x="645.0" y="514.0" width="122.0" height="92.0" rx="8" fill="#369A92" transform="rotate(-8 706.0 560.0)"/>
+<rect x="132.0" y="701.0" width="200.0" height="122.0" rx="8" fill="#369A92" transform="rotate(-8 232.0 762.0)"/>
+<rect x="392.0" y="686.0" width="180.0" height="112.0" rx="8" fill="#369A92" transform="rotate(-8 482.0 742.0)"/>
+<rect x="625.0" y="680.0" width="158.0" height="100.0" rx="8" fill="#369A92" transform="rotate(-8 704.0 730.0)"/>
+<rect x="779.0" y="776.0" width="138.0" height="92.0" rx="8" fill="#369A92" transform="rotate(-8 848.0 822.0)"/>
+<path d="M 1750 232 L 1622 300 C 1562 452 1492 572 1422 692 C 1312 842 1162 962 1012 1044 L 1750 1044 Z" fill="#7CC5DC"/>
+<path d="M 1660.0 400.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M 1684.0 430.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M 1560.0 560.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M 1584.0 590.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M 1690.0 640.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M 1714.0 670.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M 1450.0 800.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M 1474.0 830.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M 1620.0 880.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M 1644.0 910.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M 1300.0 990.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".9"/>
+<path d="M 1324.0 1020.0 q 18 -12 36 0 q 18 12 36 0" stroke="#A9DCEC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M -60 138 C 300 180 700 226 1162 292" stroke="#D9E7E1" stroke-width="128" fill="none"/>
+<path d="M 1330 250 L 1568 118 L 1750 46" stroke="#D9E7E1" stroke-width="150" fill="none"/>
+<path d="M 1310 320 C 1265 450 1195 570 1110 690 C 1000 840 850 960 700 1050" stroke="#D9E7E1" stroke-width="200" fill="none"/>
+<circle cx="1252" cy="297" r="112" fill="#D9E7E1"/>
+<circle cx="1252" cy="297" r="52" fill="#2F8D86"/>
+<circle cx="1252" cy="297" r="34" fill="#2E8B7F"/>
+<path d="M -60 138 C 300 180 700 226 1162 292" stroke="#FFFFFF" stroke-width="3.4" fill="none" stroke-dasharray="20 16" opacity=".85"/>
+<path d="M 1310 320 C 1265 450 1195 570 1110 690 C 1000 840 850 960 700 1050" stroke="#FFFFFF" stroke-width="3.4" fill="none" stroke-dasharray="20 16" opacity=".85"/>
+<path d="M 1330 250 L 1568 118 L 1750 46" stroke="#FFFFFF" stroke-width="3.4" fill="none" stroke-dasharray="20 16" opacity=".85"/>
+<rect x="1020.0" y="208.0" width="9" height="112" fill="#FFFFFF" opacity=".9" transform="rotate(9 1020.0 208.0)"/>
+<rect x="1037.0" y="208.0" width="9" height="112" fill="#FFFFFF" opacity=".9" transform="rotate(9 1037.0 208.0)"/>
+<rect x="1054.0" y="208.0" width="9" height="112" fill="#FFFFFF" opacity=".9" transform="rotate(9 1054.0 208.0)"/>
+<rect x="1071.0" y="208.0" width="9" height="112" fill="#FFFFFF" opacity=".9" transform="rotate(9 1071.0 208.0)"/>
+<rect x="1088.0" y="208.0" width="9" height="112" fill="#FFFFFF" opacity=".9" transform="rotate(9 1088.0 208.0)"/>
+<rect x="1105.0" y="208.0" width="9" height="112" fill="#FFFFFF" opacity=".9" transform="rotate(9 1105.0 208.0)"/>
+<path d="M 1526 300 C 1476 452 1404 572 1322 692 C 1212 842 1064 962 906 1050" stroke="#CDBDA2" stroke-width="36" fill="none" stroke-linecap="round"/>
+<path d="M 792 566 L 1084 536 L 1114 646 L 1010 706 L 838 690 Z" fill="#8F9895"/>
+<path d="M 664 616 L 872 596 L 880 676 L 672 692 Z" fill="#8F9895" opacity=".9"/>
+<path d="M 792 566 L 1084 536 L 1114 646 L 1010 706 L 838 690 Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="12 9" opacity=".75"/>
+<g transform="translate(1462,495) rotate(-47)">
+<rect x="-62" y="-31" width="124" height="62" rx="5" fill="#1F7A4D" stroke="#165536" stroke-width="3"/>
+<rect x="-53.0" y="-21" width="34" height="42" rx="3" fill="#C9A227" stroke="#91751C" stroke-width="2"/>
+<rect x="-15.0" y="-21" width="34" height="42" rx="3" fill="#C9A227" stroke="#91751C" stroke-width="2"/>
+<rect x="23.0" y="-21" width="34" height="42" rx="3" fill="#C9A227" stroke="#91751C" stroke-width="2"/>
+</g>
+<g transform="translate(1487.0,462.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(1424.0,532.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(958,498) rotate(-10)">
+<rect x="-110" y="-58" width="220" height="116" rx="8" fill="#4B4E4D"/>
+<rect x="-110" y="-58" width="220" height="30" rx="8" fill="#6B6E6D"/>
+<text x="26" y="16" text-anchor="middle" font-size="27" font-weight="800" fill="#FFFFFF">강변이음센터</text>
+</g>
+<rect x="868" y="530" width="104" height="11" rx="3" fill="#2C2C2C"/>
+<rect x="868" y="541" width="104" height="34" rx="4" fill="#D6473F" stroke="#9A332D" stroke-width="2.5"/>
+<rect x="850.0" y="587.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="842.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="867.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="842.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="867.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="842.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="867.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="850.0" y="629.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="842.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="867.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="842.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="867.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="842.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="867.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="876.0" y="587.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="868.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="893.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="868.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="893.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="868.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="893.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="876.0" y="629.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="868.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="893.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="868.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="893.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="868.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="893.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="902.0" y="587.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="894.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="919.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="894.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="919.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="894.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="919.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="902.0" y="629.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="894.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="919.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="894.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="919.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="894.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="919.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="928.0" y="587.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="920.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="945.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="920.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="945.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="920.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="945.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="928.0" y="629.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="920.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="945.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="920.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="945.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="920.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="945.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="954.0" y="587.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="946.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="971.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="946.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="971.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="946.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="971.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="954.0" y="629.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="946.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="971.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="946.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="971.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="946.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="971.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="980.0" y="587.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="972.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="997.5" y="590.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="972.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="997.5" y="599.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="972.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="997.5" y="608.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="980.0" y="629.0" width="16" height="30" rx="2.5" fill="#2F5597"/>
+<rect x="972.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="997.5" y="632.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="972.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="997.5" y="641.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="972.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<rect x="997.5" y="650.0" width="6" height="6.5" rx="1.6" fill="#F0A500"/>
+<g transform="translate(858.0,550.0) rotate(-10.0)"><rect x="-17.0" y="-17.0" width="34.0" height="34.0" fill="#6E7B78"/><polygon points="-17.0,-17.0 17.0,-17.0 0,0" fill="#9CA5A3"/><polygon points="17.0,-17.0 17.0,17.0 0,0" fill="#636F6C"/><polygon points="17.0,17.0 -17.0,17.0 0,0" fill="#56605E"/><polygon points="-17.0,17.0 -17.0,-17.0 0,0" fill="#7C8886"/><rect x="-17.0" y="-17.0" width="34.0" height="34.0" fill="none" stroke="#48504E" stroke-width="1.6"/></g>
+<g transform="translate(700.0,650.0) rotate(-8.0)"><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="#F2C94C"/><polygon points="-21.0,-21.0 21.0,-21.0 0,0" fill="#F6DA85"/><polygon points="21.0,-21.0 21.0,21.0 0,0" fill="#DAB544"/><polygon points="21.0,21.0 -21.0,21.0 0,0" fill="#BD9D3B"/><polygon points="-21.0,21.0 -21.0,-21.0 0,0" fill="#F3CE5E"/><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="none" stroke="#9D8331" stroke-width="1.6"/></g>
+<g transform="translate(746.0,650.0) rotate(-8.0)"><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="#E9724C"/><polygon points="-21.0,-21.0 21.0,-21.0 0,0" fill="#F09F85"/><polygon points="21.0,-21.0 21.0,21.0 0,0" fill="#D26744"/><polygon points="21.0,21.0 -21.0,21.0 0,0" fill="#B6593B"/><polygon points="-21.0,21.0 -21.0,-21.0 0,0" fill="#EB805E"/><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="none" stroke="#974A31" stroke-width="1.6"/></g>
+<g transform="translate(792.0,650.0) rotate(-8.0)"><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="#8E7CC3"/><polygon points="-21.0,-21.0 21.0,-21.0 0,0" fill="#B2A6D6"/><polygon points="21.0,-21.0 21.0,21.0 0,0" fill="#8070B0"/><polygon points="21.0,21.0 -21.0,21.0 0,0" fill="#6F6198"/><polygon points="-21.0,21.0 -21.0,-21.0 0,0" fill="#9989C9"/><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="none" stroke="#5C517F" stroke-width="1.6"/></g>
+<g transform="translate(838.0,650.0) rotate(-8.0)"><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="#FFFFFF"/><polygon points="-21.0,-21.0 21.0,-21.0 0,0" fill="#FFFFFF"/><polygon points="21.0,-21.0 21.0,21.0 0,0" fill="#E6E6E6"/><polygon points="21.0,21.0 -21.0,21.0 0,0" fill="#C7C7C7"/><polygon points="-21.0,21.0 -21.0,-21.0 0,0" fill="#FFFFFF"/><rect x="-21.0" y="-21.0" width="42.0" height="42.0" fill="none" stroke="#A6A6A6" stroke-width="1.6"/></g>
+<line x1="1085" y1="548" x2="1310" y2="748" stroke="#E6EAE8" stroke-width="46"/>
+<line x1="1085" y1="548" x2="1310" y2="748" stroke="#B9C2BF" stroke-width="46" stroke-dasharray="1 15" opacity=".35"/>
+<line x1="1069" y1="566" x2="1294" y2="766" stroke="#AEB8B5" stroke-width="4"/>
+<line x1="1101" y1="530" x2="1326" y2="730" stroke="#AEB8B5" stroke-width="4"/>
+<text x="1206" y="662" font-size="17" font-weight="700" fill="#5C6664" text-anchor="middle" transform="rotate(41.6 1206 662)">보행데크</text>
+<line x1="372" y1="614" x2="384" y2="670" stroke="#E03131" stroke-width="11" stroke-linecap="round"/>
+<line x1="958" y1="692" x2="990" y2="652" stroke="#E03131" stroke-width="11" stroke-linecap="round"/>
+<g transform="translate(963.0,527.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(998.0,545.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(1073.0,513.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(802.0,604.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(965.0,662.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(1292.0,723.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<g transform="translate(650.0,1018.0)"><circle r="10.5" fill="#F79325" stroke="#FFFFFF" stroke-width="2.6"/><path d="M -5.2 1.2 A 5.2 5.2 0 0 1 5.2 1.2 Z" fill="#FFFFFF"/><rect x="-6.6" y="1.2" width="13.2" height="2.4" rx="1.2" fill="#FFFFFF"/></g>
+<circle cx="1540.0" cy="372.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1529.0 372.0 A 11.0 11.0 0 0 1 1551.0 372.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1498.0" cy="452.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1487.0 452.0 A 11.0 11.0 0 0 1 1509.0 452.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1448.0" cy="548.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1437.0 548.0 A 11.0 11.0 0 0 1 1459.0 548.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1392.0" cy="626.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1381.0 626.0 A 11.0 11.0 0 0 1 1403.0 626.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1330.0" cy="706.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1319.0 706.0 A 11.0 11.0 0 0 1 1341.0 706.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1252.0" cy="792.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1241.0 792.0 A 11.0 11.0 0 0 1 1263.0 792.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1160.0" cy="872.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1149.0 872.0 A 11.0 11.0 0 0 1 1171.0 872.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="1060.0" cy="944.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 1049.0 944.0 A 11.0 11.0 0 0 1 1071.0 944.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="556.0" cy="214.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 545.0 214.0 A 11.0 11.0 0 0 1 567.0 214.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="996.0" cy="268.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 985.0 268.0 A 11.0 11.0 0 0 1 1007.0 268.0 Z" fill="#6DAEA5" opacity=".55"/>
+<circle cx="452.0" cy="208.0" r="11.0" fill="#2E8B7F"/>
+<path d="M 441.0 208.0 A 11.0 11.0 0 0 1 463.0 208.0 Z" fill="#6DAEA5" opacity=".55"/>
+<g transform="translate(768.0,234.0) rotate(8.0)"><rect x="-42" y="-15" width="84" height="30" rx="7" fill="#4E7A3E"/><rect x="-33" y="-9.5" width="17" height="19" rx="3" fill="#E9EEF0"/><rect x="-12" y="-9.5" width="17" height="19" rx="3" fill="#E9EEF0"/><rect x="9" y="-9.5" width="17" height="19" rx="3" fill="#E9EEF0"/><rect x="30" y="-7" width="9" height="14" rx="3" fill="#F6E7A8"/><circle cx="-24" cy="17" r="6" fill="#2E3436"/><circle cx="22" cy="17" r="6" fill="#2E3436"/></g>
+<g transform="translate(1292.0,400.0) rotate(118.0)"><rect x="-30" y="-13" width="38" height="26" rx="4" fill="#5C8A4A"/><rect x="8" y="-11" width="22" height="22" rx="5" fill="#EDF1F0"/><rect x="18" y="-6" width="10" height="12" rx="2" fill="#BCD3DA"/><circle cx="-18" cy="15" r="5.5" fill="#2E3436"/><circle cx="18" cy="15" r="5.5" fill="#2E3436"/></g>
+<g transform="translate(978.0,828.0) rotate(126.0)"><rect x="-42" y="-15" width="84" height="30" rx="7" fill="#E8A33D"/><rect x="-33" y="-9.5" width="17" height="19" rx="3" fill="#E9EEF0"/><rect x="-12" y="-9.5" width="17" height="19" rx="3" fill="#E9EEF0"/><rect x="9" y="-9.5" width="17" height="19" rx="3" fill="#E9EEF0"/><rect x="30" y="-7" width="9" height="14" rx="3" fill="#F6E7A8"/><circle cx="-24" cy="17" r="6" fill="#2E3436"/><circle cx="22" cy="17" r="6" fill="#2E3436"/></g>
+<line x1="1104.0" y1="726.0" x2="984.0" y2="668.0" stroke="#FFFFFF" stroke-width="3.4" opacity=".95"/>
+<circle cx="984.0" cy="668.0" r="4.2" fill="#FFFFFF"/>
+<rect x="1055.0" y="708.4" width="98.0" height="35.1" rx="17.6" fill="#FFFFFF" stroke="#9AA7A5" stroke-width="1.6"/>
+<text x="1104.0" y="732.6" text-anchor="middle" font-size="19.0" font-weight="700" fill="#1F3B38">안전펜스</text>
+<line x1="424.0" y1="764.0" x2="382.0" y2="668.0" stroke="#FFFFFF" stroke-width="3.4" opacity=".95"/>
+<circle cx="382.0" cy="668.0" r="4.2" fill="#FFFFFF"/>
+<rect x="330.9" y="747.4" width="186.3" height="33.3" rx="16.7" fill="#FFFFFF" stroke="#9AA7A5" stroke-width="1.6"/>
+<text x="424.0" y="770.3" text-anchor="middle" font-size="18.0" font-weight="700" fill="#1F3B38">안전펜스 · 차량통제</text>
+<line x1="1596.0" y1="452.0" x2="1505.0" y2="470.0" stroke="#FFFFFF" stroke-width="3.4" opacity=".95"/>
+<circle cx="1505.0" cy="470.0" r="4.2" fill="#FFFFFF"/>
+<rect x="1544.4" y="433.5" width="103.2" height="37.0" rx="18.5" fill="#FFFFFF" stroke="#9AA7A5" stroke-width="1.6"/>
+<text x="1596.0" y="459.0" text-anchor="middle" font-size="20.0" font-weight="700" fill="#1F3B38">피크닉존</text>
+<line x1="1414.0" y1="246.0" x2="1330.0" y2="272.0" stroke="#FFFFFF" stroke-width="3.4" opacity=".95"/>
+<circle cx="1330.0" cy="272.0" r="4.2" fill="#FFFFFF"/>
+<rect x="1361.6" y="230.3" width="104.7" height="31.5" rx="15.7" fill="#FFFFFF" stroke="#9AA7A5" stroke-width="1.6"/>
+<text x="1414.0" y="251.9" text-anchor="middle" font-size="17.0" font-weight="700" fill="#1F3B38">회전교차로</text>
+<circle cx="700.0" cy="650.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="700.0" y="656.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">1</text>
+<polygon points="713.3,626.2 716.1,632.8 723.3,633.4 717.8,638.1 719.5,645.2 713.3,641.4 707.2,645.2 708.8,638.1 703.4,633.4 710.6,632.8" fill="#F2B705" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="746.0" cy="650.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="746.0" y="656.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">2</text>
+<polygon points="759.3,626.2 762.1,632.8 769.3,633.4 763.8,638.1 765.5,645.2 759.3,641.4 753.2,645.2 754.8,638.1 749.4,633.4 756.6,632.8" fill="#F2B705" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="792.0" cy="650.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="792.0" y="656.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">3</text>
+<circle cx="838.0" cy="650.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="838.0" y="656.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">4</text>
+<polygon points="851.3,626.2 854.1,632.8 861.3,633.4 855.8,638.1 857.5,645.2 851.3,641.4 845.2,645.2 846.8,638.1 841.4,633.4 848.6,632.8" fill="#F2B705" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="920.0" cy="558.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="920.0" y="564.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">5</text>
+<circle cx="858.0" cy="550.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="858.0" y="556.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">6</text>
+<circle cx="923.0" cy="623.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="923.0" y="629.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">7</text>
+<circle cx="874.0" cy="484.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="874.0" y="490.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">8</text>
+<circle cx="981.0" cy="457.0" r="14.5" fill="#FFFFFF" stroke="#2E7F79" stroke-width="3"/>
+<text x="981.0" y="463.8" text-anchor="middle" font-size="19" font-weight="800" fill="#1F3B38">9</text>
+<polygon points="994.3,433.2 997.1,439.8 1004.3,440.4 998.8,445.1 1000.5,452.2 994.3,448.4 988.2,452.2 989.8,445.1 984.4,440.4 991.6,439.8" fill="#F2B705" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+<g transform="translate(408,936)"><circle r="40" fill="#FFFFFF" opacity=".92"/><polygon points="0,-30 11,4 0,-4 -11,4" fill="#E03131"/><polygon points="0,30 11,4 0,12 -11,4" fill="#B7C2BF"/><text x="0" y="-32" text-anchor="middle" font-size="16" font-weight="800" fill="#1F3B38">N</text></g>
+</g>
+</g>
+<rect x="0" y="0" width="1750" height="1008" fill="none" stroke="#D5E0DC" stroke-width="2"/>
+</g>
+</svg>
+      <div class="map-legend">
+        <div><span class="no">1</span>전통놀이체험 <b class="star">★</b></div>
+        <div><span class="no">2</span>추억의먹거리 <b class="star">★</b></div>
+        <div><span class="no">3</span>타로체험</div>
+        <div><span class="no">4</span>종합상황실 (안내·의료지원·포토콘테스트·피크닉세트 대여) <b class="star">★</b></div>
+        <div><span class="no">5</span>메인무대</div>
+        <div><span class="no">6</span>시스템부스</div>
+        <div><span class="no">7</span>관람석</div>
+        <div><span class="no">8</span>강변이음센터 1층 · 스마트팜 체험</div>
+        <div><span class="no">9</span>강변이음센터 3층 · 소원등 쓰기 · 낙동강라면 · 캐리커쳐 <b class="star">★</b></div>
+      </div>
+      <div class="cap">※ 항공사진을 기준으로 제작한 개략 배치도입니다. 현장 여건에 따라 조정될 수 있습니다.</div>
     </div>
     <div class="timetable-wrap">
-    <table class="timetable">
+    <table class="timetable tt3">
       <thead>
         <tr>
-          <th>시간</th>
-          <th><span class="place-tag" style="background:var(--orange)">A</span> 건물 앞 특설무대(메인무대)</th>
-          <th><span class="place-tag">B</span> 강변이음센터 1~3층·앞마당(체험·부스)</th>
-          <th><span class="place-tag" style="background:var(--purple)">C</span> 강변이음교(포토존)</th>
-          <th>비고</th>
+          <th style="width:150px;">시간</th>
+          <th>프로그램</th>
+          <th style="width:190px;">장소</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="time-cell">13:00~16:00</td>
-          <td class="empty">무대 세팅</td>
-          <td class="zone-b" rowspan="4">상시 프로그램<br><span style="font-size:12.5px;color:#555;">불암 스탬프투어 · 체험부스<br>(강변이음센터 1~3층·앞마당)</span></td>
-          <td class="zone-c" rowspan="4">상시 프로그램<br><span style="font-size:12.5px;color:#555;">포토존 · 포토콘테스트<br>(강변이음교 일원)</span></td>
-          <td class="remark">사전신청 없이 자유 참여</td>
+          <td class="time-cell">13:00~18:00</td>
+          <td class="zone-b"><b>부스 운영 · 체험 프로그램</b><br><span style="font-size:12.5px;color:#555;">선암장터 · 시간이음 · 강변피크닉 구역 전체</span></td>
+          <td><span class="place-tag">1</span> <span class="place-tag">2</span> <span class="place-tag">3</span> <span class="place-tag">4</span> <span class="place-tag">8</span> <span class="place-tag">9</span></td>
         </tr>
         <tr>
-          <td class="time-cell">16:00~17:00</td>
-          <td class="zone-a"><b>길놀이 오프닝</b><br><span style="font-size:12.5px;color:#555;">「단절에서 이음으로」</span></td>
-          <td class="remark">메인무대 오프닝</td>
+          <td class="time-cell">16:00</td>
+          <td class="zone-a"><b>길놀이 오프닝</b><br><span style="font-size:12.5px;color:#555;">「단절에서 이음으로」 이음교 → 메인무대</span></td>
+          <td><span class="place-tag">5</span></td>
         </tr>
         <tr>
-          <td class="time-cell">17:00~17:40</td>
+          <td class="time-cell">16:20</td>
           <td class="zone-a"><b>주민참여 불암 자랑대회</b></td>
-          <td class="remark">참여 시 리워드 제공</td>
+          <td><span class="place-tag">5</span></td>
         </tr>
         <tr>
-          <td class="time-cell">17:40~18:00</td>
-          <td class="empty">무대 전환 · 정비</td>
-          <td class="remark">메인 프로그램 준비</td>
-        </tr>
-        <tr class="section-row"><td colspan="5">메인 프로그램 · 18:00 ~ 21:00 (강변이음 주민한마당)</td></tr>
-        <tr>
-          <td class="time-cell">18:00~18:30</td>
-          <td class="empty">-</td>
-          <td class="zone-b" rowspan="2"><b>소원등 점등식</b><span style="font-size:12.5px;color:#555;"><br>강변이음 주민한마당 · 식사 제공<br>(18:00~19:00)</span></td>
-          <td class="empty">-</td>
-          <td class="remark">소원등 참여 선착순 200명</td>
+          <td class="time-cell">18:00</td>
+          <td class="zone-a"><b>인사말 · 소원등 점등식</b></td>
+          <td><span class="place-tag">5</span></td>
         </tr>
         <tr>
-          <td class="time-cell">18:30~19:00</td>
-          <td class="zone-a"><b>인사말</b></td>
-          <td class="empty">-</td>
-          <td class="remark"></td>
+          <td class="time-cell">18:00</td>
+          <td class="zone-b"><b>강변이음 주민한마당</b><br><span style="font-size:12.5px;color:#555;">식사 나눔</span></td>
+          <td><span class="place-tag">7</span></td>
         </tr>
         <tr>
-          <td class="time-cell">19:00~19:30</td>
+          <td class="time-cell">19:00</td>
           <td class="zone-a"><b>오케스트라 공연</b></td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="remark">주민 오케스트라</td>
+          <td><span class="place-tag">5</span></td>
         </tr>
         <tr>
           <td class="time-cell">19:30~19:45</td>
           <td class="zone-a"><b>라인댄스 공연</b></td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="remark"></td>
+          <td><span class="place-tag">5</span></td>
         </tr>
         <tr>
           <td class="time-cell">19:45~20:00</td>
-          <td class="zone-a"><b>기타 공연</b></td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="remark"></td>
+          <td class="zone-a"><b>기타 동아리 공연</b></td>
+          <td><span class="place-tag">5</span></td>
         </tr>
         <tr>
           <td class="time-cell">20:00~</td>
-          <td class="zone-a"><b>초청가수 공연 · 행사 마무리</b></td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="remark">종료 시각은 현장 상황에 따라 유동적</td>
+          <td class="zone-a"><b>초대가수 최정진 공연 · 피날레 파티</b></td>
+          <td><span class="place-tag">5</span></td>
         </tr>
       </tbody>
     </table>
-  </div>
-  <p style="margin-top:10px;font-size:12.5px;color:var(--muted);">※ 18:00 이후 프로그램의 세부 배치(소원등 점등식·인사말 등)는 기존 공간구성 기준의 제안이며, 큐시트 확정 시 조정될 수 있습니다.</p>
+    </div>
+    <p class="stamp-note">★ 스탬프 적립 : 전통놀이체험 · 추억의먹거리 · 이음교 포토콘테스트 · 소원등 쓰기</p>
     <div class="note-box">※ 상기 일정은 현장 여건 및 유관기관 협의에 따라 변경될 수 있습니다. 우천 시 예비장소(불암동 행정복지센터 2층 다목적실 등)로 전환 운영됩니다.</div>
   </div>
 </section>
