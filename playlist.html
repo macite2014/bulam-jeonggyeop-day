@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강변이음 플레이리스트 | 불암동 정겹DAY</title>
+<meta name="description" content="2026 불암동 정겹DAY · 강변이음 플레이리스트. 감성충만 버전과 기분좋게 만드는 버전.">
+<meta property="og:title" content="강변이음 플레이리스트 | 불암동 정겹DAY">
+<meta property="og:description" content="강변에서 듣기 좋은 24곡. 감성충만 버전 · 기분좋게 만드는 버전.">
+<style>
+:root{
+  --ink:#0b1b26;
+  --teal:#2e7f79;
+  --teal2:#3fa69e;
+  --amber:#ffd166;
+  --coral:#e0654a;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  min-height:100%;
+  display:flex;flex-direction:column;
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(255,209,102,.20) 0%, rgba(255,209,102,0) 26%),
+    radial-gradient(circle at 84% 16%, rgba(63,166,158,.30) 0%, rgba(63,166,158,0) 30%),
+    radial-gradient(circle at 50% 100%, rgba(224,101,74,.22) 0%, rgba(224,101,74,0) 40%),
+    linear-gradient(170deg,#07141d 0%,#0f3138 42%,#1b4f4c 74%,#2e7f79 100%);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+
+/* 흐르는 텍스트 */
+.marquee{
+  border-bottom:1px solid rgba(255,255,255,.12);
+  border-top:1px solid rgba(255,255,255,.12);
+  overflow:hidden;white-space:nowrap;padding:9px 0;
+  background:rgba(255,255,255,.04);
+  font-size:11.5px;letter-spacing:3px;font-weight:700;color:rgba(255,255,255,.55);
+}
+.marquee span{display:inline-block;padding-left:100%;animation:slide 22s linear infinite}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+.stage{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:38px 20px 46px;gap:26px}
+
+.eyebrow{
+  display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:3px;
+  padding:7px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.06);color:rgba(255,255,255,.85);
+}
+h1{margin:0;font-size:clamp(30px,7.5vw,52px);font-weight:900;letter-spacing:-1.2px;line-height:1.18}
+h1 em{font-style:normal;color:var(--amber)}
+.tag{margin:0;font-size:clamp(13px,3.4vw,16px);color:rgba(255,255,255,.72);font-weight:500}
+
+/* 레코드판 */
+.turntable{position:relative;width:min(62vw,300px);aspect-ratio:1;margin:4px 0}
+.disc{
+  position:absolute;inset:0;border-radius:50%;
+  background:
+    repeating-radial-gradient(circle at 50% 50%,
+      #10171b 0 2px, #171f24 2px 4px),
+    radial-gradient(circle at 50% 50%, #1b2429 0 42%, #10171b 42% 100%);
+  box-shadow:0 24px 60px rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.06);
+  animation:spin 7s linear infinite;
+}
+.disc::before{ /* 빛 반사 */
+  content:"";position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 210deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,.16) 34deg, rgba(255,255,255,0) 78deg,
+    rgba(255,255,255,0) 180deg, rgba(255,255,255,.10) 214deg, rgba(255,255,255,0) 260deg);
+}
+.label{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:38%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, #4ec3b8 0%, #2e7f79 55%, #1d5850 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);
+}
+.label b{font-size:clamp(11px,2.6vw,14px);font-weight:900;letter-spacing:-.3px}
+.label small{font-size:9px;letter-spacing:1.6px;opacity:.75}
+.spindle{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:5%;aspect-ratio:1;border-radius:50%;background:#0b1b26;
+  box-shadow:0 0 0 3px rgba(255,255,255,.10);
+}
+.arm{
+  position:absolute;right:-6%;top:6%;width:46%;height:8px;border-radius:6px;
+  background:linear-gradient(90deg,rgba(255,255,255,.75),rgba(255,255,255,.35));
+  transform-origin:right center;transform:rotate(28deg);
+  box-shadow:0 6px 16px rgba(0,0,0,.4);
+}
+.arm::after{content:"";position:absolute;left:-6px;top:-4px;width:18px;height:16px;border-radius:4px;
+  background:rgba(255,255,255,.85)}
+.arm::before{content:"";position:absolute;right:-9px;top:-9px;width:26px;height:26px;border-radius:50%;
+  background:radial-gradient(circle at 36% 32%,#fff,#b9c6c4)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.disc{animation:none}.marquee span{animation:none;padding-left:0}}
+
+/* 버튼 */
+.buttons{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 26px;border-radius:999px;font-size:16px;font-weight:800;
+  transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+  min-width:min(88vw,272px);justify-content:center;
+}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+.btn.mood{background:#fff;color:#12403d;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.btn.good{background:linear-gradient(120deg,#e0654a,#ffb44d);color:#2b0f06;box-shadow:0 12px 30px rgba(224,101,74,.42)}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.04)}
+.btn small{display:block;font-size:11.5px;font-weight:700;opacity:.62;letter-spacing:.2px}
+.btn .txt{text-align:left}
+
+.more{margin:2px 0 0;font-size:13px;color:rgba(255,255,255,.55)}
+.more a{text-decoration:underline;text-underline-offset:3px}
+footer{padding:0 20px 30px;text-align:center;font-size:11.5px;color:rgba(255,255,255,.45);line-height:1.9}
+</style>
+</head>
+<body>
+
+<div class="marquee"><span>♪ 2026 불암동 정겹DAY · 강변이음센터 · RIVERSIDE PLAYLIST · 감성충만 · 기분좋게 · 2026 불암동 정겹DAY · 강변이음센터 · RIVERSIDE PLAYLIST ♪</span></div>
+
+<main class="stage">
+  <div class="eyebrow">2026 불암동 주민 화합 프로그램</div>
+
+  <h1>정겹<em>DAY</em><br>강변이음 플레이리스트</h1>
+  <p class="tag">해 지는 강변에서 듣기 좋은 24곡을 두 갈래로 골랐습니다</p>
+
+  <div class="turntable" aria-hidden="true">
+    <div class="disc"></div>
+    <div class="label"><b>강변이음</b><small>PLAYLIST</small></div>
+    <div class="spindle"></div>
+    <div class="arm"></div>
+  </div>
+
+  <div class="buttons">
+    <a class="btn mood" href="https://www.youtube.com/playlist?list=PLOzZBTKnm7Mo" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.2V8.8l5.2 3.2z"/></svg>
+      <span class="txt">감성충만 버전<small>노을 · 소원등 · 천천히 걷기 12곡</small></span>
+    </a>
+    <a class="btn good" href="https://www.youtube.com/playlist?list=PLDiIU3-BUa2o" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.8 12 4.8 12 4.8s-5.9 0-7.6.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 7.6.4 7.6.4s5.9 0 7.6-.4a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.2V8.8l5.2 3.2z"/></svg>
+      <span class="txt">기분좋게 만드는 버전<small>장터 · 무대 앞 · 발이 먼저 12곡</small></span>
+    </a>
+  </div>
+
+  <p class="more"><a href="playlist-tracks.html">수록곡 전체 보기 →</a></p>
+</main>
+
+<footer>
+  강변이음센터 · 불암동 정겹DAY &nbsp;|&nbsp; 주최 김해시 · 주관 김해시도시개발공사<br>
+  ♪ ♫ ♩ ♬ ♭ ♮ ♯ ♪
+</footer>
+
+</body>
+</html>
